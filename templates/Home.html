@@ -1,16 +1,83 @@
-<html lang="en">
+<!doctype html>
+
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+
     <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+
+    <!--
+    <link rel="stylesheet" href="styles.css">
+    -->
 </head>
+
 <style>
-    body {
-        background-color: white;
-    }
-</style>
+        html, body {
+            font-family: 'Roboto Flex', sans-serif;
+            background-color: whitesmoke;
+        }
+
+        #HomeBackground1 {
+            background-color: dodgerblue;
+        }
+
+        #HomeBackground2 {
+            background-color: mediumseagreen;
+        }
+
+        .navigationcontainer1 {
+            background-color: white;
+            height: 70px;
+            width: 1000px;
+            border: 2px solid slategray;
+            padding: 10px;
+            margin: auto;
+        }
+
+        .homebutton1 {
+            background-color: white;
+            border: 2px solid dodgerblue;
+            color: dodgerblue;
+            height: 40px;
+            width: 150px;
+            margin-left: 70px;
+            margin-top: 16px;
+            transition-duration: 0.4s;
+        }
+
+        .homebutton1:hover {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        .homebuttoncontainer1 {
+            margin-left: 20px;
+        }
+    </style>
 
 <body>
 
+<h1 style = "text-align: center;">Service Nexus</h1>
+<p style = "text-align: center;">Our goal is to help connect residents in the 4s Ranch community with different kinds of service workers
+    such as carwashers, plumbers, carpenters, tutors, etc.
+</p>
+<div class="navigationcontainer1">
+    <div class="homebuttoncontainer1">
+        <button class = "homebutton1">Carwashing</button>
+        <button class = "homebutton1">Plumbing</button>
+        <button class = "homebutton1">Carpenting</button>
+        <button class = "homebutton1">Tutoring</button>
+    </div>
+</div>
+
+
+<!--
+<script src="scripts.js"></script>
+-->
 </body>
 
 <script>
