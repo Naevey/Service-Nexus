@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<style>
+ {% include "foundation/Navigation-Bar.CSS" %}
+    body {
+        overflow-x: hidden;
+    }
+
+    .navigationcontainer {
+        height: 61px;
+        width: 200%;
+        background-color: white;
+        position: relative;
+        top: -20px;
+        left: -8px;
+        padding: 10px;
+    }
+
+    .navigationlinkscontainer {
+        height: 59px;
+        width: 150%;
+        margin: 10px;
+        position: relative;
+        top: 12px;
+    }
+
+    a {
+        color: dodgerblue;
+        font-size: 21px;
+        margin-left: 28px;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+
+    .navigationdropdowncontainer {
+        display: none;
+    }
+
+</style>
+<body>
+<div class = "navigationcontainer">
+    <div class = "navigationlinkscontainer">
+        <a href = "/">Home</a>
+        <a onclick = "Dropdownmain1();" type = "button">About Us</a>
+        <div class = "navigationdropdowncontainer" id = "navigationdropdowncontainer1">
+            <a class = "navigationdropdownmember" href = "/AboutDylan/">About Dylan Luo</a>
+            <a class = "navigationdropdownmember" href = "/AboutRitvik/">About Ritvik Keerthi</a>
+            <a class = "navigationdropdownmember" href = "/AboutAdi/">About Adi Nawandhar</a>
+            <a class = "navigationdropdownmember" href = "/AboutJean/">About Jean Kim</a>
+            <a class = "navigationdropdownmember" href = "/AboutSohan/">About Sohan Sankuratri</a>
+            <a class = "navigationdropdownmember" href = "/AboutKurtis/">About Kurtis Kwan</a>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var Dropdown1 = document.getElementById("navigationdropdowncontainer1");
+    Dropdown1.style.display = "none";
+
+    function Dropdownmain1 () {
+    if (Dropdown1.style.display == "none") {
+        Dropdown1.style.display = "block";
+    }
+    else if (Dropdown1.style.display == "block"){
+        Dropdown1.style.display = "none";
+    }
+}
+</script>
+</html>

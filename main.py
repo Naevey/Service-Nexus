@@ -10,9 +10,29 @@ def Home():
     return render_template("Home.html")
 
 
-@app.route('/AboutUs/')
-def AboutUs():
-    return render_template("AboutUs.html")
+@app.route('/AboutDylan/')
+def AboutDylan():
+    return render_template("AboutDylan.html")
+
+@app.route('/AboutRitvik/')
+def AboutRitvik():
+    return render_template("AboutRitvik.html")
+
+@app.route('/AboutAdi/')
+def AboutAdi():
+    return render_template("AboutAdi.html")
+
+@app.route('/AboutJean/')
+def AboutJean():
+    return render_template("AboutJean.html")
+
+@app.route('/AboutSohan/')
+def AboutSohan():
+    return render_template("AboutSohan.html")
+
+@app.route('/AboutKurtis/')
+def AboutKurtis():
+    return render_template("AboutKurtis.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=777)
