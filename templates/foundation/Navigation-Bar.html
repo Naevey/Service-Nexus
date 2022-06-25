@@ -37,6 +37,11 @@
         color: dodgerblue;
         font-size: 21px;
         margin-left: 28px;
+        user-select: none; /* supported by Chrome and Opera */
+       -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+       -ms-user-select: none; /* Internet Explorer/Edge */
     }
 
     a:link {
@@ -44,7 +49,21 @@
     }
 
     .navigationdropdowncontainer {
-        display: none;
+        width: 150px;
+        background-color: white;
+        position: relative;
+        left: 80px;
+        border: 1px solid lightgray;
+        border-radius: 7px;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .navigationdropdownmember {
+        width: 150px;
+        border: none;
+        text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
 </style>
@@ -54,12 +73,12 @@
         <a href = "/">Home</a>
         <a onclick = "Dropdownmain1();" type = "button">About Us</a>
         <div class = "navigationdropdowncontainer" id = "navigationdropdowncontainer1">
-            <a class = "navigationdropdownmember" href = "/AboutDylan/">About Dylan Luo</a>
-            <a class = "navigationdropdownmember" href = "/AboutRitvik/">About Ritvik Keerthi</a>
-            <a class = "navigationdropdownmember" href = "/AboutAdi/">About Adi Nawandhar</a>
-            <a class = "navigationdropdownmember" href = "/AboutJean/">About Jean Kim</a>
-            <a class = "navigationdropdownmember" href = "/AboutSohan/">About Sohan Sankuratri</a>
-            <a class = "navigationdropdownmember" href = "/AboutKurtis/">About Kurtis Kwan</a>
+            <div class = "navigationdropdownmember" ><a href = "/AboutDylan/" style = "position: relative; left: -21px;">Dylan Luo</a></div>
+            <div class = "navigationdropdownmember" ><a href = "/AboutRitvik/" style = "position: relative; left: -21px;">Ritvik Keerthi</a></div>
+            <div class = "navigationdropdownmember" ><a href = "/AboutAdi/" style = "position: relative; left: -21px;">Adi Nawandhar</a></div>
+            <div class = "navigationdropdownmember" ><a href = "/AboutJean/" style = "position: relative; left: -21px;">Jean Kim</a></div>
+            <div class = "navigationdropdownmember" ><a href = "/AboutSohan/" style = "position: relative; left: -21px;">Sohan Sankuratri</a></div>
+            <div class = "navigationdropdownmember" ><a href = "/AboutKurtis/" style = "position: relative; left: -21px;">Kurtis Kwan</a></div>
         </div>
     </div>
 </div>
@@ -75,6 +94,7 @@
     else if (Dropdown1.style.display == "block"){
         Dropdown1.style.display = "none";
     }
+
 }
 </script>
 </html>
