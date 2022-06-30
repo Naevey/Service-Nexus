@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html>
 <head>
     <meta charset="utf-8">
@@ -14,7 +13,49 @@
 </head>
 
 <style>
-    {% include "Home.CSS" %}
+         html, body {
+            font-family: 'Roboto Flex', sans-serif;
+            background-color: whitesmoke;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        #HomeBackground1 {
+            background-color: dodgerblue;
+        }
+
+        #HomeBackground2 {
+            background-color: mediumseagreen;
+        }
+
+        .navigationcontainer1 {
+            background-color: white;
+            height: 70px;
+            width: 1000px;
+            border: 2px solid slategray;
+            padding: 10px;
+            margin: auto;
+        }
+
+        .homebutton1 {
+            background-color: white;
+            border: 2px solid dodgerblue;
+            color: dodgerblue;
+            height: 40px;
+            width: 150px;
+            margin-left: 70px;
+            margin-top: 16px;
+            transition-duration: 0.4s;
+        }
+
+        .homebutton1:hover {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        .homebuttoncontainer1 {
+            margin-left: 20px;
+        }
 </style>
 
 
@@ -40,7 +81,11 @@
 -->
 </body>
 
+<!--
 <script src = "Home.js">
+-->
+<script>
+
 </script>
 
 </html>

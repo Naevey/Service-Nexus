@@ -10,18 +10,16 @@
 
 </head>
 <style>
- {% include "foundation/Navigation-Bar.CSS" %}
+    /* Swap the first "%" and "{" signs to get the "include" block to work */ %{ include "foundation/Navigation-Bar.CSS" %} %}
     body {
         overflow-x: hidden;
+        overflow-y: hidden;
     }
 
     .navigationcontainer {
         height: 61px;
         width: 200%;
         background-color: white;
-        position: relative;
-        top: -20px;
-        left: -8px;
         padding: 10px;
     }
 
@@ -29,8 +27,9 @@
         height: 59px;
         width: 150%;
         margin: 10px;
+        margin-left: 28px;
         position: relative;
-        top: 12px;
+        top: 10px;
     }
 
     a {
@@ -54,7 +53,7 @@
         position: relative;
         left: 80px;
         border: 1px solid lightgray;
-        border-radius: 7px;
+        border-radius: 4px;
         box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
     }
 

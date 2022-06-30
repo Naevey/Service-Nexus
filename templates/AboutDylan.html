@@ -1,10 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+
+    <title>About Dylan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {% include "foundation/Navigation-Bar.html" %}
 </head>
+
+<style>
+    html, body {
+        font-family: 'Roboto Flex', san-serif;
+        background-repeat: no-repeat;
+        overflow-x: hidden;
+    }
+
+    #AboutDylanBackground1 {
+        min-height: 100vh;
+        background: linear-gradient(to top right, #ccffff 0%, #3399ff 100%);
+        background-repeat: no-repeat;
+        padding: 240px;
+        z-index: 1;
+    }
+
+    .AboutDylanBackground1Barrier {
+        height: 700px;
+        margin: auto;
+        background: white;
+        background-repeat: no-repeat;
+        opacity: 0.7;
+        z-index: 2;
+    }
+
+    .profilecontainer {
+        height: 500px;
+        width: 500px;
+        background-color: white;
+        margin: auto;
+        position: relative;
+        top: -56pc;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.7);
+        z-index: 3;
+    }
+
+    .imageprofile {
+        border-radius: 50%;
+        background-color: whitesmoke;
+        height: 240px;
+        width: 240px;
+        position: relative;
+        top: -548px;
+        margin: auto;
+        z-index: 4;
+    }
+
+    .fa {
+        border-radius: 50%;
+        font-size: 24px;
+        height: 21px;
+        width: 21px;
+        padding: 12px;
+        border: 2px solid dodgerblue;
+        background-color: white;
+        color: dodgerblue;
+        text-align: center;
+        transition-duration: 0.8s;
+    }
+
+    .fa:hover {
+        color: white;
+        background-color: dodgerblue;
+    }
+</style>
+
 <body>
+    <div id = "AboutDylanBackground1">
+        <div class = "AboutDylanBackground1Barrier"></div>
+            <div class = "imageprofile">
+                <img src = "" alt = "Dylan's Picture">
+            </div>
+            <div class = "profilecontainer">
+                <a href = "" class = "fa fa-instagram" style = "margin-left: 228px; position: relative; top: 28px;"></a>
+                <h1 style = "text-align: center; position: relative; top: 319px;">Dylan Luo</h1>
+                <h2 style = "text-align: center; position: relative; top: 319px; font-weight: normal;">Team Leader and Program Manager</h2>
+            </div>
+    </div>
 
 </body>
+
+<script>
+
+</script>
 </html>
