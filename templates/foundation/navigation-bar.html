@@ -74,28 +74,31 @@
         <a href = "/">Home</a>
         <a onclick = "Dropdownmain1();" type = "button">About Us</a>
         <div class = "navigationdropdowncontainer" id = "navigationdropdowncontainer1">
-            <div class = "navigationdropdownmember" ><a href = "/AboutDylan/" style = "position: relative; left: -21px;">Dylan Luo</a></div>
-            <div class = "navigationdropdownmember" ><a href = "/AboutRitvik/" style = "position: relative; left: -21px;">Ritvik Keerthi</a></div>
-            <div class = "navigationdropdownmember" ><a href = "/AboutAdi/" style = "position: relative; left: -21px;">Adi Nawandhar</a></div>
-            <div class = "navigationdropdownmember" ><a href = "/AboutJean/" style = "position: relative; left: -21px;">Jean Kim</a></div>
-            <div class = "navigationdropdownmember" ><a href = "/AboutSohan/" style = "position: relative; left: -21px;">Sohan Sankuratri</a></div>
-            <div class = "navigationdropdownmember" ><a href = "/AboutKurtis/" style = "position: relative; left: -21px;">Kurtis Kwan</a></div>
+            <div class = "navigationdropdownmember" ><a href = "/aboutdylan/" style = "position: relative; left: -21px;">Dylan Luo</a></div>
+            <div class = "navigationdropdownmember" ><a href = "/aboutritvik/" style = "position: relative; left: -21px;">Ritvik Keerthi</a></div>
+            <div class = "navigationdropdownmember" ><a href = "/aboutadi/" style = "position: relative; left: -21px;">Adi Nawandhar</a></div>
+            <div class = "navigationdropdownmember" ><a href = "/aboutjean/" style = "position: relative; left: -21px;">Jean Kim</a></div>
+            <div class = "navigationdropdownmember" ><a href = "/aboutsohan/" style = "position: relative; left: -21px;">Sohan Sankuratri</a></div>
+            <div class = "navigationdropdownmember" ><a href = "/aboutkurtis/" style = "position: relative; left: -21px;">Kurtis Kwan</a></div>
         </div>
+        <a href = "/servicesearch/">Service Search</a>
     </div>
 </div>
-</body>
-<script>
-    var Dropdown1 = document.getElementById("navigationdropdowncontainer1");
-    Dropdown1.style.display = "none";
 
-    function Dropdownmain1 () {
-    if (Dropdown1.style.display == "none") {
-        Dropdown1.style.display = "block";
-    }
-    else if (Dropdown1.style.display == "block"){
+    <script>
+        var Dropdown1 = document.getElementById("navigationdropdowncontainer1");
         Dropdown1.style.display = "none";
-    }
 
-}
-</script>
+        function Dropdownmain1 () {
+        if (Dropdown1.style.display == "none") {
+            Dropdown1.style.display = "block";
+        }
+        else if (Dropdown1.style.display == "block"){
+            Dropdown1.style.display = "none";
+        }
+
+    }
+    </script>
+
+</body>
 </html>

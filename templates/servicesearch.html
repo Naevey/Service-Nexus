@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>About Dylan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {% include "foundation/Navigation-Bar.html" %}
+</head>
+<style>
+    html, body {
+        font-family: 'Roboto Flex', sans-serif;
+        overflow-x: hidden;
+    }
+
+    #SearchBackground1 {
+        background-color: white;
+    }
+
+    .PrimarySearchContainer {
+        height: 50px;
+        width: 650px;
+        border: 2px solid black;
+        margin: auto;
+        background-color: white;
+        padding: 7px;
+    }
+
+    .PrimarySearchBar {
+        margin-top: 11px;
+        margin-left: 11px;
+        height: 21px;
+        width: 400px;
+    }
+
+    .SearchButton1 {
+        height: 24px;
+        width: 200px;
+        background-color: white;
+        border-radius: 21px;
+        border: 2px solid;
+        border-image: linear-gradient(45deg, cyan, dodgerblue) 1;
+        margin-top: 11px;
+    }
+</style>
+<body>
+    <div id = "SearchBackground1">
+        <h1 style = "text-align: center;">Service Search</h1>
+        <div class = "PrimarySearchContainer">
+            <form>
+                <input class = "PrimarySearchBar">
+                <button class = "SearchButton1">Search</button>
+            </form>
+        </div>
+    </div>
+    <script>
+
+    </script>
+
+</body>
+</html>
