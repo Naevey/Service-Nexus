@@ -1,13 +1,31 @@
-from flask import render_template, request, Flask
+
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 import json, requests
+from flask import Flask, render_template, request, url_for, redirect, session
+from flask_mysqldb import MySQL
+import mySQLdb.cursors
+import re
 
 # create a Flask instance
 app = Flask(__name__)
 
+app.secret_key = 'service-NEXUS-a72387as349sjidla02'
+
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'service-nexus'
+app.config['MYSQL_PASSWORD'] = 'NEXUS-TEMP'
+app.config['MYSQL_DB'] = 'nexus'
+
+mysql = MySQL(app)
+
 @app.route('/')
 def home():
     return render_template("/foundation/home.html")
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+
+
 
 @app.route('/aboutdylan/')
 def aboutdylan():
