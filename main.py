@@ -6,33 +6,36 @@ import json, requests
 app = Flask(__name__)
 
 @app.route('/')
-def Home():
-    return render_template("Home.html")
+def home():
+    return render_template("/foundation/home.html")
 
+@app.route('/aboutdylan/')
+def aboutdylan():
+    return render_template("aboutdylan.html")
 
-@app.route('/AboutDylan/')
-def AboutDylan():
-    return render_template("AboutDylan.html")
+@app.route('/aboutritvik/')
+def aboutritvik():
+    return render_template("aboutritvik.html")
 
-@app.route('/AboutRitvik/')
-def AboutRitvik():
-    return render_template("AboutRitvik.html")
+@app.route('/aboutadi/')
+def aboutadi():
+    return render_template("aboutadi.html")
 
-@app.route('/AboutAdi/')
-def AboutAdi():
-    return render_template("AboutAdi.html")
+@app.route('/aboutjean/')
+def aboutjean():
+    return render_template("aboutjean.html")
 
-@app.route('/AboutJean/')
-def AboutJean():
-    return render_template("AboutJean.html")
+@app.route('/aboutsohan/')
+def aboutsohan():
+    return render_template("aboutsohan.html")
 
-@app.route('/AboutSohan/')
-def AboutSohan():
-    return render_template("AboutSohan.html")
+@app.route('/aboutkurtis/')
+def aboutkurtis():
+    return render_template("aboutkurtis.html")
 
-@app.route('/AboutKurtis/')
-def AboutKurtis():
-    return render_template("AboutKurtis.html")
+@app.route('/servicesearch/')
+def servicesearch():
+    return render_template("servicesearch.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=777)
