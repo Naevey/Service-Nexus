@@ -18,8 +18,8 @@
     }
 
     #SearchBackground1 {
-        height: 500px;
-        background-color: white;
+        height: 800px;
+        background-color: whitesmoke;
     }
 
     .PrimarySearchContainer {
@@ -52,20 +52,55 @@
     .SearchButton1:hover {
         border-image: linear-gradient(45deg, dodgerblue, cyan) 1;
     }
+
+    input::placeholder {
+        font-size: 12px;
+    }
+
+    .ServiceCategory {
+        margin: auto;
+        height: 550px;
+        width: 325px;
+        background-color: white;
+        margin-top: 100px;
+        padding: 10px;
+    }
+
+    .ServiceCategoryImage {
+        margin: auto;
+        height: 300px;
+        width: 300px;
+        background-color: whitesmoke;
+    }
 </style>
 <body>
     <div id = "SearchBackground1">
         <h1 style = "text-align: center;">Service Search</h1>
         <div class = "PrimarySearchContainer">
-            <form>
-                <input class = "PrimarySearchBar">
-                <button class = "SearchButton1">Search</button>
-            </form>
+            <input class = "PrimarySearchBar" id = "userinput" placeholder = "Search category (e.g. maintenance, amenity, medical, education, etc.)">
+            <button class = "SearchButton1" id = "searchbutton">Search</button>
+            <h2 id = "displaytext" style = "margin-top: 50px"></h2>
+            <div class = "ServiceCategory">
+                <div class = "ServiceCategoryImage">
+
+                </div>
+            </div>
         </div>
     </div>
     <script>
+        var ServiceCategories = ["Maintenance", "Amenity", "Medical", "Education"];
+        var ServiceSearchInputValue = document.getElementById("userinput");
+        var ServiceResult = document.getElementById("displaytext");
+        function ServiceSearch() {
+            ServiceResult.innerHTML = "Search results for " + "<i>" + ServiceSearchInputValue.value + "</i>" + ":";
+            for (var I = 0; I < ServiceCategories.length; I++) {
+                if (ServiceCategories[I] == ServiceSearchInputValue.value) {
+                }
+            }
+        }
 
+        var SearchButton = document.getElementById("searchbutton");
+        SearchButton.addEventListener("click", ServiceSearch);
     </script>
-
 </body>
 </html>
