@@ -79,28 +79,41 @@
         <div class = "PrimarySearchContainer">
             <input class = "PrimarySearchBar" id = "userinput" placeholder = "Search category (e.g. maintenance, amenity, medical, education, etc.)">
             <button class = "SearchButton1" id = "searchbutton">Search</button>
-            <h2 id = "displaytext" style = "margin-top: 50px"></h2>
-            <div class = "ServiceCategory">
-                <div class = "ServiceCategoryImage">
-
-                </div>
-            </div>
         </div>
+        <h2 id = "displaytext" style = "margin-top: 50px"></h2>
+        <input id = "userinput2">
+        <button onclick = "serviceReminder()">Add Reminder</button>
+        <ul id = "myservicereminds"></ul>
     </div>
     <script>
-        var ServiceCategories = ["Maintenance", "Amenity", "Medical", "Education"];
-        var ServiceSearchInputValue = document.getElementById("userinput");
-        var ServiceResult = document.getElementById("displaytext");
-        function ServiceSearch() {
-            ServiceResult.innerHTML = "Search results for " + "<i>" + ServiceSearchInputValue.value + "</i>" + ":";
-            for (var I = 0; I < ServiceCategories.length; I++) {
-                if (ServiceCategories[I] == ServiceSearchInputValue.value) {
-                }
+
+        var userInput2 = document.getElementById("userinput2");
+        var myServiceReminds = document.getElementById("myservicereminds");
+
+        if (localStorage.getItem("myServiceRemindsKey")) {
+            for (var i = 0; i < JSON.parse(localStorage.getItem("myServiceRemindsKey")).length; i++) {
+                var serviceRemindRetrieve = document.createElement("li");
+                serviceRemindRetrieve.innerHTML = JSON.parse(localStorage.getItem("myServiceRemindsKey"))[i];
+                myServiceReminds.appendChild(serviceRemindRetrieve);
             }
         }
 
-        var SearchButton = document.getElementById("searchbutton");
-        SearchButton.addEventListener("click", ServiceSearch);
+        function serviceReminder() {
+            var serviceRemind = document.createElement("li");
+            serviceRemind.innerHTML = userInput2.value;
+            myServiceReminds.appendChild(serviceRemind);
+            if (localStorage.getItem("myServiceRemindsKey")) {
+                var listServiceReminds2 = JSON.parse(localStorage.getItem("myServiceRemindsKey"));
+                listServiceReminds2.push(serviceRemind.innerHTML);
+                localStorage.setItem("myServiceRemindsKey", JSON.stringify(listServiceReminds2));
+            }
+            else {
+                var listServiceReminds1 = [serviceRemind.innerHTML];
+                localStorage.setItem("myServiceRemindsKey", JSON.stringify(listServiceReminds1));
+            }
+        }
+
+
     </script>
 </body>
 </html>
